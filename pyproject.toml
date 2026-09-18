@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tabulous"
+version = "0.1.0"
+description = "Messy, Tabular and Fabulous data on demand — synthetic datasets with known, injectable messiness for teaching data cleaning."
+requires-python = ">=3.10"
+dependencies = ["pandas", "pyyaml"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+tabulous = "tabulous.cli:main"
+
+[tool.setuptools]
+packages = ["tabulous"]
